@@ -1,0 +1,30 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "Hackerearth hiring challenge",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "async": "2.0.1",
+    "body-parser": "^1.14.2",
+    "cors": "2.8.0",
+    "debug": "2.2.0",
+    "express": "^4.13.4",
+    "fast-csv": "2.1.0",
+    "jade": "1.11.0",
+    "mongoose": "^4.3.7",
+    "morgan": "^1.6.1"
+  },
+  "devDependencies": {
+    "jshint": "2.9.1",
+    "nodemon": "1.8.1"
+  },
+  "keywords": [
+    "hackerearth"
+  ],
+  "author": "nivesh singh",
+  "license": "MIT",
+  "engines" : { "node" : ">=4.0.0" }
+}

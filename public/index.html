@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="gotAPP">
+  <head>
+    <title>Game of thrones Battles, API!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="milligram.min.css">
+    <script src="got.js"></script>
+  </head>
+
+  <body>
+    <div  class ="container">
+      <h4>API | Game of thrones! </h4>
+      <div ng-controller="battleController as battle">
+
+        <div>
+          <label for="search">Input Search Query:</label>
+          <input type="text" ng-model="battle.searchBar" placeholder="Search">
+        </div>
+
+      <div>
+        <button class="button" ng-click="battle.loadList()">list places</button>
+        <button class="button" ng-click="battle.loadStats()">stats</button>
+        <button class="button" ng-click="battle.loadCount()">count</button>
+        <button class="button" ng-click="battle.loadSearch()">search</button>
+      </div>
+      <div ng-show="battle.loading">
+        {{battle.loading}}
+      </div>
+
+        <ol ng-show="battle.list">
+          <li ng-repeat="i in battle.list">{{i}}</li>
+        </ol>
+
+        <div ng-show="battle.stats">
+          <ul ng-repeat="(key,value) in battle.stats">
+            <li><strong>{{key}}</strong>:{{value}}</li>
+          </ul>
+        </div>
+        <div ng-show="battle.count">
+          Count of total records: {{battle.count}}
+        </div>
+        <div ng-show="battle.search" class="container">
+          <p>Note: Only few data is being displayed here.</p>
+          <table>
+            <thead>
+              <tr>
+              <td>name</td>
+              <td>year</td>
+              <td>battle_number</td>
+              <td>attacker_king</td>
+              <td>defender_king</td>
+              <td>attacker_outcome</td>
+              <td>battle_type</td>
+              <td>major_death</td>
+              <td>major_capture</td>
+              <td>attacker_size</td>
+              <td>defender_size</td>
+              <td>attacker_commander</td>
+              <td>defender_commander</td>
+              <td>location</td>
+              <td>region</td>
+            </tr>
+
+            </thead>
+            <tbody>
+            <tr ng-repeat="x in battle.search">
+              <td>{{ x.name }}</td>
+              <td>{{ x.year }}</td>
+              <td>{{ x.battle_number }}</td>
+              <td>{{ x.attacker_king }}</td>
+              <td>{{ x.defender_king }}</td>
+              <td>{{ x.attacker_outcome }}</td>
+              <td>{{ x.battle_type }}</td>
+              <td>{{ x.major_death }}</td>
+              <td>{{ x.major_capture}}</td>
+              <td>{{ x.attacker_size}}</td>
+              <td>{{ x.defender_size}}</td>
+              <td>{{ x.attacker_commander }}</td>
+              <td>{{ x.defender_commander }}</td>
+              <td>{{ x.location }}</td>
+              <td>{{ x.region }}</td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+
+
+      </div>
+
+    </div>
+  </body>
+
+
+</html>
