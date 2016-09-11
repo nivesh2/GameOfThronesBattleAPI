@@ -1,4 +1,7 @@
-SetUp project:
+
+Visit Demo WebAPP: http://topprhack.azurewebsites.net/
+
+##SetUp project:
  1. Just change the mongo database url to yours in: config>config.js
     - i had used mongo labs(mongoDB service) credentials as a remote database, which i have removed.
  2. run: 
@@ -17,6 +20,7 @@ SetUp project:
 
 API routes: 
  local:
+ 
     - http://localhost:3000/list
     - http://localhost:3000/count
     - http://localhost:3000/stats
