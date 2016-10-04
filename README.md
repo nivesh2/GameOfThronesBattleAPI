@@ -1,5 +1,6 @@
 
-Visit Demo WebAPP: http://topprhack.azurewebsites.net/
+###Info
+*API server with an index.html file(as view) using mongoDB for database.*
 
 ##SetUp project:
  1. Just change the mongo database url to yours in: config>config.js
@@ -24,5 +25,5 @@ API routes:
     - http://localhost:3000/list
     - http://localhost:3000/count
     - http://localhost:3000/stats
-    - http://localhost:3000/search?
+    - http://localhost:3000/search?{query_parameters}
 
